@@ -43,6 +43,7 @@ Setup for Moxa UC-8200 to make base configuration
    5. Type `sudo reboot`
 
 8. Install Ignition Edge
+   These instructions are based of the Readme file included in the install
    1. Type `sudo mkdir /usr/local/Ignition-Gateway` to create the Ignition directory
    2. Using a FTP/SSH software, copy Ignition Edge install from PC to device
       - Copy Ignition Edge install to `/home/edgeadmin`
@@ -55,7 +56,7 @@ Setup for Moxa UC-8200 to make base configuration
    9. Type `sudo ./ignition.sh install` To install as a system service that auto-starts Ignition on system boo
    10. Type `sudo ./ignition.sh start` to start the ignition gateway
    
-9. Igntion Edge initial commission and modules
+9. Ignition Edge initial commission and modules
    1. Open a web browser and navigate to `http://192.168.3.127:8088`
    2. Create new user `edgesupport`
       - Password is in secret server
@@ -65,8 +66,29 @@ Setup for Moxa UC-8200 to make base configuration
    5. Click on Install or Upgrade Module at bottom of page
      - Install `MQTT-Transmission-signed_4_0_11.modl`
      - Install `EFM-Emerson-ROC-Driver-signed_4_0_11.modl`
-     
-   
+
+** These next steps are from a Moxa git**The intructions below are based off that**
+https://github.com/Moxa-Linux/resize-image
+
+10. Setup another Linux PC to close to - I used raspberry pi
+   1. Need to get GIT package
+      - `sudo apt install git`
+   2. Then need moxa resize-image package
+      - `sudo git clone https://github.com/Moxa-Linux/resize-image`
+      
+11. Create clone of device
+   1. Create clone to another linux (See Moxa Git for details)
+      - `sudo dd if=/dev/mmcblk2 | ssh pi@192.168.112.146 dd of=/tmp/uc8100_dump.img`\
+      = This is done from moxa
+   2. Then log into your linux pc and
+      - `sudo git clone https://github.com/Moxa-Linux/resize-image`
+      - `cd /resize-image`
+   3. `sudo ./resize-img C /tmp/uc8100_dump.img` to resize the image
+   4. Use filezilla to transfer 'resize.img' to pc
+      - File will be at `/resize-image`
+  
+  
+  
   
 
 6. Update Hostname
