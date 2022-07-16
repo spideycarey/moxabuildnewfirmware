@@ -78,8 +78,9 @@ https://github.com/Moxa-Linux/resize-image
       
 11. Create clone of device
    1. Create clone to another linux (See Moxa Git for details)
-      - `sudo dd if=/dev/mmcblk2 | ssh pi@192.168.112.146 dd of=/tmp/uc8100_dump.img`\
-      = This is done from moxa
+      - `sudo dd if=/dev/mmcblk2 | ssh pi@192.168.112.146 dd of=/tmp/uc8100_dump.img`
+      - To run the above command, you need to be logged in with sudo or else it wants two passwords at once and that created errors.  To prevent this, i ran the ignition status command with sudo first, that way credentials were updated
+      - This is done from moxa
    2. Then log into your linux pc and
       - `sudo git clone https://github.com/Moxa-Linux/resize-image`
       - `cd /resize-image`
