@@ -54,8 +54,8 @@ Setup for Moxa UC-8200 to make base configuration
       - Copy Ignition Edge install to `/home/edgeadmin`
    3. Type `sudo apt-get update` to get and apply updates to device
    4. Type `sudo apt-get install unzip` to install WinZip on device
-   5. Type `sudo unzip Ignition-Edge-linux-armhf-32-8.1.17.zip -d /usr/local/bin/ignition` to unzip and install
-   6. Type `sudo rm Ignition-Edge-linux-armhf-32-8.1.17.zip` and press `Enter` to remove file
+   5. Type `sudo unzip /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.17.zip -d /usr/local/bin/ignition` to unzip and install
+   6. Type `sudo rm /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.17.zip` and press `Enter` to remove file
    7. Type `cd /usr/local/bin/ignition`
    8. Type `sudo chmod +x *.sh` to make all ignition scripts executable
    9. Type `sudo ./ignition.sh install` To install as a system service that auto-starts Ignition on system boo
