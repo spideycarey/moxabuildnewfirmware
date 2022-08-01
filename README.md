@@ -28,7 +28,7 @@ Setup for Moxa UC-8200 to make base configuration
    2. Type `sudo vi interfaces`
       - To update file, press 'Insert' on keyboard to insert text rather than replace.
       - edit file and once done press 'ESC' key and then ':wq' to save and exit file
-   4. PUT PIC OF IP SETTINGS HERE ***************
+   4. ![Network](https://user-images.githubusercontent.com/109390971/182206674-d5072440-a331-4c82-ae8a-625e36b6fee4.png)
    5. Type `sudo reboot` to reboot device
    6. Connect to device on DHCP network via LAN 2
       - This LAN needs internet if preforming upgrades
@@ -41,6 +41,11 @@ Setup for Moxa UC-8200 to make base configuration
       - Secondary is `10.65.0.250`
    4. PUT PIC OF NTP SETTINGS HERE ***************
    5. Type `sudo reboot`
+   
+8. Install Moxa Ignition DEB packages
+   These packages are installed so when the edge device reboots, the license key is not lost
+   1. Type `sudo apt install \home\edgeadmin\moxa-uc-8200-series-kernel-module-package-for-ignition-edge-firmware-v1.3-software-package-v1.0.deb`
+   2. Type `sudo apt install \home\edgeadmin\moxa-uc-8200-series-kernel-package-for-ignition-edge-firmware-v1.3-software-package-v1.0.deb`
 
 8. Install Ignition Edge
    These instructions are based of the Readme file included in the install
