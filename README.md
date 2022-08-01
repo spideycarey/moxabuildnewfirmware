@@ -39,7 +39,7 @@ Setup for Moxa UC-8200 to make base configuration
       - edit file and once done press `ctrl + x` to save
       - Primary is `10.8.0.250`
       - Secondary is `10.65.0.250`
-   4. PUT PIC OF NTP SETTINGS HERE ***************
+   4. ![NTP](https://user-images.githubusercontent.com/109390971/182207266-fd71b35f-93e4-4d0a-93f8-514b0a5a5589.png)
    5. Type `sudo reboot`
    
 8. Install Moxa Ignition DEB packages
