@@ -45,6 +45,7 @@ Setup for Moxa UC-8200 to make base configuration
 8. Install Ignition Edge
    These instructions are based of the Readme file included in the install
    1. Type `sudo mkdir /usr/local/bin/ignition` to create the Ignition directory
+   2. Type `sudo chown edgeadmin /usr/local/bin/ignition` to set the owner of the directory
    2. Using a FTP/SSH software, copy Ignition Edge install from PC to device
       - Copy Ignition Edge install to `/home/edgeadmin`
    3. *********remove *********** Type `sudo apt-get update` to get and apply updates to device
@@ -58,8 +59,8 @@ Setup for Moxa UC-8200 to make base configuration
 
 8. Install Moxa Ignition DEB packages
    These packages are installed so when the edge device reboots, the license key is not lost
-   1. Type `sudo apt install /home/edgeadmin\moxa-uc-8200-series-kernel-module-package-for-ignition-edge-firmware-v1.3-software-package-v1.0.deb`
-   2. Type `sudo apt install /home/edgeadmin\moxa-uc-8200-series-kernel-package-for-ignition-edge-firmware-v1.3-software-package-v1.0.deb`
+   1. Type `sudo apt install /home/edgeadmin/moxa-uc-8200-series-kernel-module-package-for-ignition-edge-firmware-v1.3-software-package-v1.0.deb`
+   2. Type `sudo apt install /home/edgeadmin/moxa-uc-8200-series-kernel-package-for-ignition-edge-firmware-v1.3-software-package-v1.0.deb`
    
 9. Ignition Edge initial commission and modules
    1. Open a web browser and navigate to `http://192.168.4.127:8088`
