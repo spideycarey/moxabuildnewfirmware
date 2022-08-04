@@ -4,6 +4,7 @@ Setup for Moxa UC-8200 to make base configuration
    - Use Putty software
      - LAN 2 Default IP is `192.168.4.127`
      - Use Port `22`
+   
    ![lan2](https://user-images.githubusercontent.com/109390971/182858043-242a11da-11f1-40d3-b667-8326291d9cc2.png)
 
 2. Enter Username and Password
@@ -12,25 +13,23 @@ Setup for Moxa UC-8200 to make base configuration
 
 3. Create `edgeadmin` user
    1. Type `sudo useradd -m -G sudo -s /bin/bash edgeadmin` to add new user
-   2. Enter moxa password `moxa'
-   3. Type `sudo passwd edgeadmin`
+   2. Type `sudo passwd edgeadmin`
      - Set password
      - Get password from Secret Server
 
 4. Log out, and log back in with `edgeadmin` user
+   - To do this, you must close putty and reopen the connection in putty
 
 5. Disable Moxa user
    1. Type `sudo passwd -l moxa`
 
 6. Update LAN 2 IP Address to be DHCP so it can be connected to the internet for updates and licensing 
-   1. Type `cd /etc/network/`
-   2. Type `sudo vi interfaces`
+   1. Type `sudo vi /etc/network/interfaces`
       - To update file, press 'Insert' on keyboard to insert text rather than replace.
-      - edit file and once done press 'ESC' key and then ':wq' to save and exit file
-   4. ![Network](https://user-images.githubusercontent.com/109390971/182206674-d5072440-a331-4c82-ae8a-625e36b6fee4.png)
-   5. Type `sudo reboot` to reboot device
-   6. Connect to device on DHCP network via LAN 2
-      - This LAN needs internet if preforming upgrades
+   2. ![net](https://user-images.githubusercontent.com/109390971/182859623-0f017c34-1347-422e-bc2c-52115882aadc.png)
+   3. Edit file to look like above and once done press 'ESC' key and then ':wq' to save and exit file
+   4. Type `sudo reboot` to reboot device
+   5. LAN 2 can stay connected to PC, but also plug LAN1 into internet to obtain updates to device.
       
 7. Set NTP Time Server Config 
    1. Type `sudo nano /etc/systemd/timesyncd.conf`
