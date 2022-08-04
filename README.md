@@ -1,11 +1,10 @@
 # moxabuildnewfirmware
 Setup for Moxa UC-8200 to make base configuration
-1. SSH into device via ethernet using LAN 1 on device
+1. SSH into device via ethernet using LAN 2 on device
    - Use Putty software
-     - LAN 1 Default IP is `192.168.3.127`
+     - LAN 2 Default IP is `192.168.4.127`
      - Use Port `22`
-
-   - ![putty](https://user-images.githubusercontent.com/108074645/175321878-c8aefea5-4a4e-4410-8502-54d3b70611ac.png)
+   ![lan2](https://user-images.githubusercontent.com/109390971/182858043-242a11da-11f1-40d3-b667-8326291d9cc2.png)
 
 2. Enter Username and Password
    - default username is `moxa`
