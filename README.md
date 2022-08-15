@@ -42,17 +42,21 @@ Setup for Moxa UC-8200 to make base configuration
    
 8. Install Moxa Ignition DEB packages (Must be in the order below)
    These packages are installed so when the edge device reboots, the license key is not lost
-   1. Type `sudo dpkg -i /home/edgeadmin/uc8200-modules_4.4.176+1.0.11+tpmi1_armhf.deb`
-   2. Type `sudo dpkg -i /home/edgeadmin/uc8200-kernel_4.4.176+1.0.11+tpmi1_armhf.deb`
+   1. Using a FTP/SSH software, copy below files from PC to device
+      - Copy files to `/home/edgeadmin`
+   2. Type `sudo dpkg -i /home/edgeadmin/uc8200-modules_4.4.176+1.0.11+tpmi1_armhf.deb`
+   3. Type `sudo dpkg -i /home/edgeadmin/uc8200-kernel_4.4.176+1.0.11+tpmi1_armhf.deb`
+   4. Type `sudo reboot`
 
 9. Install Ignition Edge
    These instructions are based of the Readme file included in the install
-   1. Type `sudo mkdir /usr/local/bin/ignition` to create the Ignition directory
+   1. ******not needed if the above packages are run ****** Type `sudo mkdir /usr/local/bin/ignition` to create the Ignition directory
    2. Type `sudo chown edgeadmin /usr/local/bin/ignition` to set the owner of the directory
    2. Using a FTP/SSH software, copy Ignition Edge install from PC to device
       - Copy Ignition Edge install to `/home/edgeadmin`
    3. Type `sudo apt-get update` to get and apply updates to device
    4. Type `sudo apt-get install unzip` to install WinZip on device
+   4. ************does this go here??****** Type `sudo apt install binutils` to install readelf utility on device (To prevent error messages on startup with ignition)
    5. Type `sudo unzip /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.18.zip -d /usr/local/bin/ignition` to unzip and install
    6. Type `sudo rm /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.18.zip` to remove file
    7. Type `cd /usr/local/bin/ignition`
