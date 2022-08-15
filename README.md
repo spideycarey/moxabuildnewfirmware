@@ -50,19 +50,19 @@ Setup for Moxa UC-8200 to make base configuration
 
 9. Install Ignition Edge
    These instructions are based of the Readme file included in the install
-   1. ******not needed if the above packages are run ****** Type `sudo mkdir /usr/local/bin/ignition` to create the Ignition directory
+   1. (No longer required) Type `sudo mkdir /usr/local/bin/ignition` to create the Ignition directory
    2. Type `sudo chown edgeadmin /usr/local/bin/ignition` to set the owner of the directory
-   2. Using a FTP/SSH software, copy Ignition Edge install from PC to device
+   3. Using a FTP/SSH software, copy Ignition Edge install from PC to device
       - Copy Ignition Edge install to `/home/edgeadmin`
-   3. Type `sudo apt-get update` to get and apply updates to device
-   4. Type `sudo apt-get install unzip` to install WinZip on device
-   4. ************does this go here??****** Type `sudo apt install binutils` to install readelf utility on device (To prevent error messages on startup with ignition)
-   5. Type `sudo unzip /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.18.zip -d /usr/local/bin/ignition` to unzip and install
-   6. Type `sudo rm /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.18.zip` to remove file
-   7. Type `cd /usr/local/bin/ignition`
-   8. Type `sudo chmod +x *.sh` to make all ignition scripts executable
-   9. Type `sudo ./ignition.sh install` To install as a system service that auto-starts Ignition on system boo
-   10. Type `sudo ./ignition.sh start` to start the ignition gateway
+   4. Type `sudo apt-get update` to get and apply updates to device
+   5. Type `sudo apt-get install unzip` to install WinZip on device
+   6. Type `sudo apt install binutils` to install readelf utility on device (To prevent error messages on startup with ignition)
+   7. Type `sudo unzip /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.18.zip -d /usr/local/bin/ignition` to unzip and install
+   8. Type `sudo rm /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.18.zip` to remove file
+   9. Type `cd /usr/local/bin/ignition`
+   10. Type `sudo chmod +x *.sh` to make all ignition scripts executable
+   11. Type `sudo ./ignition.sh install` To install as a system service that auto-starts Ignition on system boo
+   12. Type `sudo ./ignition.sh start` to start the ignition gateway
    
 10. Ignition Edge initial commission and modules
    1. Open a web browser and navigate to `http://192.168.4.127:8088`
