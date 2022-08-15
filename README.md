@@ -90,6 +90,7 @@ https://github.com/Moxa-Linux/resize-image
    1. Create clone to another linux (See Moxa Git for details)
       - `sudo dd if=/dev/mmcblk2 | ssh pi@192.168.112.146 dd of=/tmp/uc8100_dump.img`
       - To run the above command, you need to be logged in with sudo or else it wants two passwords at once and that created errors.  To prevent this, i ran the ignition status command with sudo first, that way credentials were updated
+      - This takes a long time to complete with no feed back.  After entering pi password, it looks like nothing is happening, but it is working if no errors are given.
 
 13. Resize Clone
    1. Then log into your linux pc and
