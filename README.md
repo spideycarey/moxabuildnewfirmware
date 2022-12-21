@@ -23,7 +23,7 @@ Setup for Moxa UC-8200 to make base configuration
 5. Disable Moxa user
    1. Type `sudo passwd -l moxa`
 
-6. Update LAN 2 IP Address to be DHCP so it can be connected to the internet for updates and licensing 
+6. Update LAN 1 IP Address to be DHCP so it can be connected to the internet for updates and licensing 
    1. Type `sudo vi /etc/network/interfaces`
       - To update file, press 'Insert' on keyboard to insert text rather than replace.
    2. ![net](https://user-images.githubusercontent.com/109390971/182859623-0f017c34-1347-422e-bc2c-52115882aadc.png)
