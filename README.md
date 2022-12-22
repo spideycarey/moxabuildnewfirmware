@@ -57,8 +57,8 @@ Setup for Moxa UC-8200 to make base configuration
    4. Type `sudo apt-get update` to get and apply updates to device
    5. Type `sudo apt-get install unzip` to install WinZip on device
    6. Type `sudo apt install binutils` to install readelf utility on device (To prevent error messages on startup with ignition)
-   7. Type `sudo unzip /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.18.zip -d /usr/local/bin/ignition` to unzip and install
-   8. Type `sudo rm /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.18.zip` to remove file
+   7. Type `sudo unzip /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.21.zip -d /usr/local/bin/ignition` to unzip and install
+   8. Type `sudo rm /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.21.zip` to remove file
    9. Type `cd /usr/local/bin/ignition`
    10. Type `sudo chmod +x *.sh` to make all ignition scripts executable
    11. Type `sudo ./ignition.sh install` To install as a system service that auto-starts Ignition on system boo
@@ -72,8 +72,8 @@ Setup for Moxa UC-8200 to make base configuration
    3. Log into Ignition
    4. Go to `Config -> Modules`
    5. Click on Install or Upgrade Module at bottom of page
-      - Install `MQTT-Transmission-signed_4_0_12.modl`.
-      - Install `EFM-Emerson-ROC-Driver-signed_4_0_12.modl`.
+      - Install `MQTT-Transmission-signed_4_0_14.modl`.
+      - Install `EFM-Emerson-ROC-Driver-signed_4_0_14.modl`.
 
 ** These next steps are from a Moxa git**The intructions below are based off that**
 https://github.com/Moxa-Linux/resize-image
