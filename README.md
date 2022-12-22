@@ -75,31 +75,39 @@ Setup for Moxa UC-8200 to make base configuration
       - Install `MQTT-Transmission-signed_4_0_14.modl`.
       - Install `EFM-Emerson-ROC-Driver-signed_4_0_14.modl`.
 
+11. Run the following commands to clear files before imaging
+    `sudo rm -r /tmp/*`
+     `sudo rm /var/cache/apt/pkgcache.bin*`
+     `sudo rm /var/cache/apt/srcpkgcache.bin`
+     `sudo rm /var/lib/apt/lists/*_Packages`
+     `sudo rm /etc/ssh/ssh_host_*``
+
 ** These next steps are from a Moxa git**The intructions below are based off that**
 https://github.com/Moxa-Linux/resize-image
 
-11. Setup another Linux PC to clone to - I used raspberry pi
+12. Setup another Linux PC to clone to - I used raspberry pi
     - These steps are done on the Linux PC
     1. Need to get GIT package
        - `sudo apt install git`
     2. Then need moxa resize-image package
        - `sudo git clone https://github.com/Moxa-Linux/resize-image`
       
-12. Create clone of device
+13. Create clone of device
     - These steps are done in the UC-8200
    1. Create clone to another linux (See Moxa Git for details)
       - `sudo dd if=/dev/mmcblk2 | ssh pi@192.168.112.146 dd of=/tmp/uc8100_dump.img`
       - To run the above command, you need to be logged in with sudo or else it wants two passwords at once and that created errors.  To prevent this, i ran the ignition status command with sudo first, that way credentials were updated
       - This takes a long time to complete with no feed back.  After entering pi password, it looks like nothing is happening, but it is working if no errors are given.
 
-13. Resize Clone
+14. Resize Clone
    1. Then log into your linux pc and
       - `sudo git clone https://github.com/Moxa-Linux/resize-image`
       - `cd /resize-image`
    2. `sudo ./resize-img C /tmp/uc8100_dump.img` to resize the image
    3. Use filezilla to transfer 'resize.img' to pc
       - File will be at `/resize-image`
-  
+
+END
   
   
   
