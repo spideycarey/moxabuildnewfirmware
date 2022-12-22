@@ -35,9 +35,9 @@ Setup for Moxa UC-8200 to make base configuration
    1. Type `sudo nano /etc/systemd/timesyncd.conf`
    2. Type `sudo vi interfaces`
       - edit file and once done press `ctrl + x` to save
-      - Primary is `10.8.0.250`
+      - Primary is `10.254.0.10`
       - Secondary is `10.65.0.250`
-   4. ![NTP](https://user-images.githubusercontent.com/109390971/182207266-fd71b35f-93e4-4d0a-93f8-514b0a5a5589.png)
+   4. ![image](https://user-images.githubusercontent.com/109390971/209026737-e59ba031-7c95-4288-9467-77b393c9db03.png)
    5. Type `sudo reboot`
    
 8. Install Moxa Ignition DEB packages (Must be in the order below)
