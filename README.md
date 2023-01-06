@@ -38,7 +38,9 @@ Setup for Moxa UC-8200 to make base configuration
       - Primary is `10.254.0.10`
       - Secondary is `10.65.0.250`
    4. ![image](https://user-images.githubusercontent.com/109390971/209026737-e59ba031-7c95-4288-9467-77b393c9db03.png)
-   5. Type `sudo reboot`
+   5. Type `sudo timedatectl set-timezone America/Edmonton`
+   6. Type `sudo apt purge ntp`
+   7. Type `sudo reboot`
    
 8. Install Moxa Ignition DEB packages (Must be in the order below)
    These packages are installed so when the edge device reboots, the license key is not lost
