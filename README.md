@@ -78,11 +78,10 @@ Setup for Moxa UC-8200 to make base configuration
       - Install `EFM-Emerson-ROC-Driver-signed_4_0_14.modl`.
 
 11. Run the following commands to clear files before imaging
-    `sudo rm -r /tmp/*`
-     `sudo rm /var/cache/apt/pkgcache.bin*`
-     `sudo rm /var/cache/apt/srcpkgcache.bin`
-     `sudo rm /var/lib/apt/lists/*_Packages`
-     `sudo rm /etc/ssh/ssh_host_*``
+    1. Type `sudo rm -r /tmp/*`
+    2. Type  `sudo rm /var/cache/apt/pkgcache.bin*`
+    3. Type  `sudo rm /var/cache/apt/srcpkgcache.bin`
+    4. Type `sudo rm /var/lib/apt/lists/*_Packages`
 
 ** These next steps are from a Moxa git**The intructions below are based off that**
 https://github.com/Moxa-Linux/resize-image
